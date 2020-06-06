@@ -283,17 +283,17 @@ class PythonAT2 < Formula
 
   def caveats
     <<~EOS
-    Pip and setuptools have been installed. To update them
-      pip install --upgrade pip setuptools
+      Pip and setuptools have been installed. To update them
+        pip install --upgrade pip setuptools
 
-    You can install Python packages with
-      pip install <package>
+      You can install Python packages with
+        pip install <package>
 
-    They will install into the site-package directory
-      #{site_packages}
+      They will install into the site-package directory
+        #{site_packages}
 
-    See: https://docs.brew.sh/Homebrew-and-Python
-  EOS
+      See: https://docs.brew.sh/Homebrew-and-Python
+    EOS
   end
 
   test do
