@@ -64,26 +64,27 @@ class LuaAT52 < Formula
     (lib/"pkgconfig").install_symlink "lua.pc" => "lua-5.2.pc"
   end
 
-  def pc_file; <<~EOS
-    V= 5.2
-    R= 5.2.4
-    prefix=#{opt_prefix}
-    INSTALL_BIN= ${prefix}/bin
-    INSTALL_INC= ${prefix}/include
-    INSTALL_LIB= ${prefix}/lib
-    INSTALL_MAN= ${prefix}/share/man/man1
-    INSTALL_LMOD= #{HOMEBREW_PREFIX}/share/lua/${V}
-    INSTALL_CMOD= #{HOMEBREW_PREFIX}/lib/lua/${V}
-    exec_prefix=${prefix}
-    libdir=${exec_prefix}/lib
-    includedir=${prefix}/include
+  def pc_file
+    <<~EOS
+      V= 5.2
+      R= 5.2.4
+      prefix=#{opt_prefix}
+      INSTALL_BIN= ${prefix}/bin
+      INSTALL_INC= ${prefix}/include
+      INSTALL_LIB= ${prefix}/lib
+      INSTALL_MAN= ${prefix}/share/man/man1
+      INSTALL_LMOD= #{HOMEBREW_PREFIX}/share/lua/${V}
+      INSTALL_CMOD= #{HOMEBREW_PREFIX}/lib/lua/${V}
+      exec_prefix=${prefix}
+      libdir=${exec_prefix}/lib
+      includedir=${prefix}/include
 
-    Name: Lua
-    Description: An Extensible Extension Language
-    Version: 5.2.4
-    Requires:
-    Libs: -L${libdir} -llua -lm
-    Cflags: -I${includedir}
+      Name: Lua
+      Description: An Extensible Extension Language
+      Version: 5.2.4
+      Requires:
+      Libs: -L${libdir} -llua -lm
+      Cflags: -I${includedir}
     EOS
   end
 
