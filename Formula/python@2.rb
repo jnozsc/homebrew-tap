@@ -33,8 +33,8 @@ class PythonAT2 < Formula
   end
 
   resource "wheel" do
-    url "https://files.pythonhosted.org/packages/5b/e1/fa6dccd0d461520fbaa98d47cdf1ba26d5a2666e24b454d0e27387420e4b/wheel-0.35.0.tar.gz"
-    sha256 "625e645aae0706ad09690bded523196a065fbcf9afcdb2d713b59e01ef8699c0"
+    url "https://files.pythonhosted.org/packages/83/72/611c121b6bd15479cb62f1a425b2e3372e121b324228df28e64cc28b01c2/wheel-0.35.1.tar.gz"
+    sha256 "99a22d87add3f634ff917310a3d87e499f19e663413a52eb9232c447aa646c9f"
   end
 
   def lib_cellar
